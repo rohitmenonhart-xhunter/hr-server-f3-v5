@@ -16,7 +16,7 @@ CORS(app)
 @retry(wait=wait_exponential(multiplier=1, min=4, max=10), stop=stop_after_attempt(3),
        retry=retry_if_exception_type(httpx.RequestError))
 def initialize_gradio_client():
-    return Client("rohitmenonhart/mistral-super-f2")
+    return Client("rohitmenonhart/mistral-super-f3")
 
 client = initialize_gradio_client()
 
